@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Austin Flowers</title>
+  <meta name="description" content="Personal and open-source projects by Austin Flowers, senior data engineer.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fira-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <div class="brand">
+        <a class="brand__name" href="./">Austin Flowers</a>
+        <p class="brand__role">Senior Data Engineer in Northwest Arkansas</p>
+      </div>
+      <nav aria-label="Pages">
+        <ul class="tabs">
+          <li><a href="./">Overview</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="wrap">
+      <h1 class="page-title">Projects</h1>
+      <p class="page-intro">Personal and open-source work. Production work for employers is described on the <a href="resume.html">resume</a>.</p>
+
+      <ul class="filters" id="filters" aria-label="Filter projects by type"><!-- filled from data/projects.json --></ul>
+      <div class="tiles" id="project-tiles" aria-live="polite"><!-- filled from data/projects.json --></div>
+      <noscript><p>The project list needs JavaScript. You can also browse my work at <a href="https://github.com/Austin-Flowers">github.com/Austin-Flowers</a>.</p></noscript>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>Austin Flowers</p>
+      <ul>
+        <li><a href="mailto:AustinFlowers@gmail.com">AustinFlowers@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/apflowers/">LinkedIn</a></li>
+        <li><a href="https://github.com/Austin-Flowers">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,54 +1,25 @@
 {
   "groups": [
-    {
-      "id": "data-engineering",
-      "title": "Data engineering",
-      "blurb": "End-to-end pipelines on public data, built without company systems."
-    },
-    {
-      "id": "open-source",
-      "title": "Open source",
-      "blurb": "Contributions to projects other people maintain."
-    },
-    {
-      "id": "data-tools",
-      "title": "Data tools",
-      "blurb": "Desktop tools for the repetitive parts of reporting and data cleanup."
-    },
-    {
-      "id": "ai-apps",
-      "title": "AI apps",
-      "blurb": "Applications built around large language models."
-    },
-    {
-      "id": "web",
-      "title": "Web",
-      "blurb": "Sites built from scratch."
-    }
+    { "id": "data-engineering", "title": "Data engineering" },
+    { "id": "dashboards", "title": "Dashboards" },
+    { "id": "open-source", "title": "Open source" },
+    { "id": "data-tools", "title": "Data tools" },
+    { "id": "ai-apps", "title": "AI apps" },
+    { "id": "web", "title": "Web" }
   ],
+
   "projects": [
     {
       "id": "openrazer-huntsman",
-      "title": "OpenRazer: Huntsman V3 HE keyboard support",
+      "title": "OpenRazer keyboard support",
       "group": "open-source",
       "status": "merged",
-      "featured": false,
-      "summary": "Added Linux support for the Razer Huntsman V3 HE Magnetic Tenkeyless 8KHz to OpenRazer, the open-source driver and daemon for Razer hardware. The maintainers merged it in November 2026.",
-      "details": "The keyboard is the Hall-effect sibling of an already supported model and speaks the same protocol, so the work was proving that and wiring the new device ID through every layer: the C kernel driver, the Python daemon, the udev rules and the device metadata. 84 lines across 7 files, tested on Fedora with Polychromatic.",
-      "tech": [
-        "C (Linux kernel module)",
-        "Python",
-        "udev"
-      ],
+      "featured": true,
+      "summary": "Added Linux support for the Razer Huntsman V3 HE Magnetic Tenkeyless 8KHz to OpenRazer's driver and daemon. Merged by the maintainers in November 2026.",
+      "details": "The keyboard uses the same protocol as a model OpenRazer already supported, so the change adds its device ID across the C kernel driver, the Python daemon, the udev rules and the device metadata: 84 lines across 7 files. Tested on Fedora with Polychromatic.",
+      "tech": ["C", "Python", "Linux"],
       "links": [
-        {
-          "label": "View the merged commit",
-          "url": "https://github.com/openrazer/openrazer/commit/cd5c4243bfafb08df7e2d2963367c3c150626eac"
-        },
-        {
-          "label": "OpenRazer on GitHub",
-          "url": "https://github.com/openrazer/openrazer"
-        }
+        { "label": "Merged commit", "url": "https://github.com/openrazer/openrazer/commit/cd5c4243bfafb08df7e2d2963367c3c150626eac" }
       ]
     },
     {
@@ -56,13 +27,10 @@
       "title": "SpeedySheets",
       "group": "data-tools",
       "status": "in-progress",
-      "summary": "A desktop tool that automates repeat Excel reports. You map a report once as a reusable template, then generate it from new data in a single run.",
-      "details": "The working prototype is in Python. I'm rebuilding it in C to get a fast, self-contained program and to fix the defects the prototype surfaced.",
-      "tech": [
-        "C",
-        "Python",
-        "Excel (.xlsx)"
-      ],
+      "featured": true,
+      "summary": "Desktop tool that automates repeat Excel reports from reusable mapping templates.",
+      "details": "Started as a Python prototype. Now being rebuilt in C as a fast, self-contained program.",
+      "tech": ["C", "Python", "Excel"],
       "links": []
     },
     {
@@ -70,13 +38,9 @@
       "title": "TACO",
       "group": "data-tools",
       "status": "in-progress",
-      "summary": "A desktop app for curating messy datasets. Load a CSV, choose an ID column and the fields to review, then step through rows to fill gaps or check every value, with guidance and examples alongside.",
-      "details": "Two review modes: empty cells only, or all data. Curated output is saved separately from the source file. A direct ArcGIS connection is planned.",
-      "tech": [
-        "Python",
-        "Tkinter",
-        "pandas"
-      ],
+      "summary": "Desktop app for curating CSV data row by row: fill empty cells or review every value, with guidance on screen.",
+      "details": "Pick a unique ID and the columns to review, then step through records in empty-cells-only or all-data mode. Curated output is saved separately from the source file.",
+      "tech": ["Python", "Tkinter", "pandas"],
       "links": []
     },
     {
@@ -85,11 +49,10 @@
       "group": "ai-apps",
       "status": "in-progress",
       "statusLabel": "Alpha",
-      "summary": "A self-hosted, open-source life planning app. An AI coach breaks goals into small steps and places them in the open windows on your calendar, across areas like health, home, money and food.",
-      "details": "Designed to replace the pile of separate trackers people keep, with every area optional. Currently in alpha as a ground-up 2.0 rebuild; per-area AI assistants are planned.",
-      "tech": [
-        "OpenRouter LLM API"
-      ],
+      "featured": true,
+      "summary": "Self-hosted, open-source life planner. An AI coach breaks goals into small steps and fits them into open time on your calendar.",
+      "details": "Covers the areas people usually track in separate apps, like health, home, money and food, with every area optional. Currently in alpha as a ground-up 2.0 rebuild.",
+      "tech": ["Self-hosted", "OpenRouter"],
       "links": []
     },
     {
@@ -97,11 +60,9 @@
       "title": "Solo Guitar Arranger",
       "group": "ai-apps",
       "status": "in-progress",
-      "summary": "A web app that turns sheet music into playable solo-guitar arrangements using language models.",
-      "details": "Being built with a guitarist who tests the arrangements. Pricing tiers map to model choice, from low-cost open-weight models up to Claude.",
-      "tech": [
-        "OpenRouter LLM API"
-      ],
+      "summary": "Web app that turns sheet music into solo-guitar arrangements using language models.",
+      "details": "Pricing tiers map to model choice, from low-cost open-weight models up to Claude. Being tested with a guitarist before launch.",
+      "tech": ["OpenRouter"],
       "links": []
     },
     {
@@ -109,7 +70,7 @@
       "title": "Early-2000s style website",
       "group": "web",
       "status": "in-progress",
-      "summary": "A site built from scratch in the style of early-2000s web design.",
+      "summary": "A site built in the style of early-2000s web design.",
       "tech": [],
       "links": []
     }
